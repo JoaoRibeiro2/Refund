@@ -90,6 +90,7 @@ form.onsubmit = (e) => {
       }
       expenseItem.append(remove)
       updateTotals()
+      formClear()
     }catch(error){
       alert("Não foi possível atualizar a lista de despesas")
       console.log(error)
@@ -130,4 +131,12 @@ expenseList.addEventListener("click", function(event){
   }
   updateTotals()
 
+  
+
 })
+
+  function formClear(){
+    expense.value = ""
+    category.value = ""
+    amount.value = ""
+  }
